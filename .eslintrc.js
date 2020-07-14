@@ -10,12 +10,16 @@ module.exports = {
   },
   extends: [
     '@nuxtjs/eslint-config-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
     'plugin:nuxt/recommended',
     'plugin:vue/recommended',
     'plugin:vue-scoped-css/recommended',
+    'prettier/@typescript-eslint',
     'eslint:recommended'
   ],
   plugins: [
+    'jest',
     'vue',
     '@typescript-eslint'
   ],
