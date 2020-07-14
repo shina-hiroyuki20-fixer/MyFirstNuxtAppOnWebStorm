@@ -1,14 +1,19 @@
 <template>
   <div>
     <p>
-      /users/_id.vue
+      User Id: {{userId}}
     </p>
   </div>
 </template>
 
 <script>
   export default {
-    name: '_id'
+    name: '_id',
+    data() {
+      return {
+        userId: this.$route.params.id
+      }
+    }
   }
 </script>
 
