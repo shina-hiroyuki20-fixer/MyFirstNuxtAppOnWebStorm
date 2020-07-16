@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { NuxtAxiosInstance } from '@nuxtjs/axios';
 
 export default Vue.extend({
   async mounted () {
