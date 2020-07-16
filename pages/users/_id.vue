@@ -1,20 +1,21 @@
 <template>
   <div>
     <p>
-      User Id: {{userId}}
+      User Id: {{ userId }}
     </p>
   </div>
 </template>
 
-<script>
-  export default {
-    name: '_id',
-    data() {
-      return {
-        userId: this.$route.params.id
-      }
-    }
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  data (): { userId: string } {
+    return {
+      userId: this.$route.params.id
+    };
   }
+});
 </script>
 
 <style scoped>
