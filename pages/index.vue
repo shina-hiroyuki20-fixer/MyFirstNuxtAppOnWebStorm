@@ -1,36 +1,20 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo/>
-      <h1 class="title">
-        my-first-nuxt-app
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <!--    -->
   </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
+import Vue from 'vue';
 
-  export default Vue.extend({})
+export default Vue.extend({
+  async mounted () {
+    console.log(
+      JSON.stringify(await
+      this.$axios.$get('https://api.worldoftanks.asia/wot/account/info/?application_id=687e3868f13387ec81f6f7ee8c19376e&account_id=2008482749'), true, '')
+    );
+  }
+});
 </script>
 
 <style>

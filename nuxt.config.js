@@ -55,6 +55,13 @@ export default {
     '@nuxtjs/axios'
   ],
   /*
+  ** Typescript options
+  */
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true
+  },
+  /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
