@@ -9,10 +9,10 @@ import Vue from 'vue';
 import { NuxtAxiosInstance } from '@nuxtjs/axios';
 
 export default Vue.extend({
-  async mounted () { // 1a99d197-32f1-4c78-8591-85b3232db99f
+  async asyncData ({ $axios }: { $axios: NuxtAxiosInstance }) { // 1a99d197-32f1-4c78-8591-85b3232db99f
     console.log(
       JSON.stringify(await
-      this.$axios.$get('https://atnd.ak4.jp/api/cooperation/FIXER2018/staffs/0341?token=1a99d197-32f1-4c78-8591-85b3232db99f'), true, '')
+      $axios.$get('https://atnd.ak4.jp/api/cooperation/FIXER2018/staffs/193491?token=1a99d197-32f1-4c78-8591-85b3232db99f'))
     );
   }
 });
